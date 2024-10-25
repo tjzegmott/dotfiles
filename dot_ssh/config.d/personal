@@ -1,0 +1,8 @@
+# Personal
+Host apollo
+  ForwardAgent yes
+
+Host extapollo
+  HostName 69.156.66.222
+  Port 10922
+  ForwardAgent yes

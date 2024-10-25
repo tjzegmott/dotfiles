@@ -1,0 +1,71 @@
+[branch]
+  sort = "-committerdate"
+
+[commit]
+  sshsign = true
+  gpgsign = true
+
+[core]
+  autocrlf = "input"
+  editor = "vim"
+  pager = "delta -s"
+
+[credential "https://github.com"]
+helper = !~/.nix-profile/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+  helper = !~.nix-profile/bin/gh auth git-credential
+
+[delta]
+  navigate = true    # use n and N to move between diff sections
+  light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+  line-numbers = true
+  zero-style = "dim syntax"
+
+[diff]
+  tool = "nvimdiff"
+
+[difftool]
+  prompt = true
+
+[difftool "nvimdiff"]
+  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+
+[filter "lfs"]
+  clean = "git-lfs clean -- %f"
+  process = "git-lfs filter-process"
+  required = true
+  smudge = "git-lfs smudge -- %f"
+
+[gpg]
+  format = "ssh"
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[init]
+  defaultBranch = "main"
+
+[merge]
+  tool = "fugitive"
+
+[mergetool "fugitive"]
+  cmd = "nvim -f -c \"Gvdiffsplit!\" \"$MERGED\""
+
+[pull]
+  rebase = true
+
+[rebase]
+  autoStash = true
+
+[rerere]
+  enabled = true
+
+[user]
+  email = "tzegmott@gmail.com"
+  name = "Tarik Zegmott"
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDBx0oYd5GgtBvf93MkQFMxWwOg+6bKSNOLa6G+qRMl6 YORP
+
+# Configuration for CHIME
+[includeIf "gitdir:~/Workspace/CHIME/"]
+  path = ~/Workspace/CHIME/.gitconfig

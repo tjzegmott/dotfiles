@@ -1,0 +1,17 @@
+os:
+  editPreset: "nvim"
+customCommands:
+  - key: "C"
+    command: "git cz commit -s"
+    context: "files"
+    loadingText: "opening commitizen commit tool"
+    subprocess: true
+  - key: "o"
+    command: "nvim -c ':Octo pr create'"
+    context: "localBranches"
+    loadingText: "Loading Octo"
+    description: "Open pull request with Octo"
+    subprocess: true
+# keybinding:
+#   branches:
+# createPullRequest: "O"

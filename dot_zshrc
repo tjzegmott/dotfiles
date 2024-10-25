@@ -1,0 +1,161 @@
+## Configuring PATH
+# Nix
+if [[ -f /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh ]]; then                             
+  . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+  . /nix/var/nix/profiles/default/etc/profile.d/nix.sh
+fi
+# 
+export PATH=$PATH\:/usr/local/bin/
+export PATH=$PATH\:/Users/tarikzegmott/Software/src/bin/
+export PATH=$PATH\:/opt/homebrew/bin/
+export PATH=$PATH\:$(brew --prefix)/Caskroom/miniconda/base/bin/
+export PATH=$PATH\:/Users/tarikzegmott/.iraf/bin/  # Setup iraf commands
+# photometry pipeline setup
+export PHOTPIPEDIR=/Users/tarikzegmott/Software/photometrypipeline/
+export PATH=$PATH\:$PHOTPIPEDIR
+# Add PostgreSQL to PATH
+export PATH=$PATH\:/opt/homebrew/opt/postgresql@13/bin/
+# Set PATH, MANPATH, etc., for Homebrew. # Set PATH, MANPATH, etc., for Homebrew.
+eval "$(brew shellenv)"
+
+export NVIM_APPNAME="LazyVim"
+
+_set_chime_tokens() {
+  # CHIME FRB API
+  export CHIME_FRB_ACCESS_TOKEN=$(op item get chime\ frb\ tokens --vault chime --fields Access.token)
+  export CHIME_FRB_REFRESH_TOKEN=$(op item get chime\ frb\ tokens --vault chime --fields Refresh.token)
+  export FRB_MASTER_ACCESS_TOKEN=$(op item get chime\ frb\ tokens --vault chime --fields Access.token)
+  export FRB_MASTER_REFRESH_TOKEN=$(op item get chime\ frb\ tokens --vault chime --fields Refresh.token)
+}
+
+## Aliases
+alias ql="qlmanage -p"
+alias nv="nvim"
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+alias ping="prettyping --nolegend"
+alias cat="bat"
+alias nu="/opt/homebrew/bin/nu --config ~/.nushell/config.nu --env-config ~/.nushell/env.nu"
+alias t="tmux"
+alias sb="cd /Users/tarikzegmott/Workspace/Obsidian/second-brain/ && nv home.md"
+alias o="/usr/bin/open"
+
+# DS9
+alias ds9="ds9 -view layout vertical -view buttons no -view colorbar no"
+
+# IRAF
+alias iraf="xgterm -geometry 80x20 -bg lavender -fg navy -sb -sl 2000 -fn 10x20 -T IRAF -e ecl &"
+
+# VO Tools
+alias jskycalc="java -jar ~/Applications/JSkyCalc.jar"
+
+# Quick look
+alias qlf="qlmanage -p \!:1"
+
+# Lazy tools
+alias lg="lazygit"
+alias ld="lazydocker"
+
+# Git
+alias gitroot='cd $(git rev-parse --show-toplevel)'
+
+# Configure brew completions
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
+# bun completions
+[ -s "/Users/tarikzegmott/.bun/_bun" ] && source "/Users/tarikzegmott/.bun/_bun"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/mc mc
+
+# FZF Configuration
+eval "$(fzf --zsh)"
+source ~/.zsh/plugins/fzf-git.sh
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
+show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+    export|unset) fzf --preview "eval 'echo \${}'"         "$@" ;;
+    ssh)          fzf --preview 'dig {}'                   "$@" ;;
+    *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
+  esac
+}
+_fzf_compgen_path() {
+  fd --hidden --exclude .git . "$1"
+}
+_fzf_compgen_dir() {
+  fd --type d --hidden --exclude .git . "$1"
+}
+fg="#CBE0F0"
+purple="#B388FF"
+blue="#06BCE4"
+cyan="#2CF9ED"
+export FZF_DEFAULT_OPTS="--color=fg:${fg},hl:${purple},fg+:${fg},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
+
+# 1password
+eval "$(op completion zsh)"; compdef _op op
+source /Users/tarikzegmott/.config/op/plugins.sh
+export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+
+# TheFuck
+eval $(thefuck --alias)
+
+# ZSH Autosuggestions and Sytax highlighting
+source ~/.nix-profile/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.nix-profile/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/plugins/completion.zsh
+# With Brew
+#source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Kubectl Autosuggestions
+source <(kubectl completion zsh)
+alias k=kubectl
+
+# Helm Autosuggestions
+source <(helm completion zsh)
+
+# Add Krew to PATH
+# - Krew is a K8s package manager: Kubernetes + Brew = Krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# Add Krew MinIO Autosuggestions
+source <(k minio completion zsh)
+
+# OpenStack (Alliance Canada Arbutus Cloud)
+export OS_CLOUD=arbutus
+
+# Oh My Posh
+eval "$(oh-my-posh init zsh --config ~/.oh-my-posh/themes/catppuccin.omp.json)" 
+
+# Eza (better ls)
+alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --grid"
+
+# Zoxide
+eval "$(zoxide init zsh)"
+alias cd=z
+
+# ATAC
+export ATAC_KEY_BINDINGS=/Users/tarikzegmott/.config/atac/keybindings/vim_key_bindings.toml
+
+# Direnv
+eval "$(direnv hook zsh)"
+
+# Set up history
+export HISTSIZE=SAVEHIST=10000
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_DUPS
+export HISTIGNORE="pwd:ls:cd"

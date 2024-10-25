@@ -1,0 +1,14 @@
+Host *.physics.mcgill.ca
+  User tzegmott
+  PreferredAuthentications publickey,password
+  # IndentitiesOnly yes
+  AddKeysToAgent yes
+  ForwardAgent yes
+  HashKnownHosts yes
+  Compression yes
+  # Port 22
+  Protocol 2
+  # ServerAliveInterval 60
+  # ServerAliveCountMax 60
+  # ControlPath ~/.ssh/sockets/%h-%p-%r
+  # ControlMaster auto

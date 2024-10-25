@@ -1,0 +1,96 @@
+# CHIME-FRB
+# CHIME
+Host liberty
+  HostName liberty.chimenet.ca
+  User tzegmott
+  ForwardAgent yes
+  SendEnv FRB_MASTER_ACCESS_TOKEN
+  SendEnv FRB_MASTER_REFRESH_TOKEN
+
+Host tubular
+  HostName tubular.chimenet.ca
+  User tzegmott
+  ForwardAgent yes
+  SendEnv FRB_MASTER_ACCESS_TOKEN
+  SendEnv FRB_MASTER_REFRESH_TOKEN
+
+Host nubular
+  HostName login.chimenet.ca
+  User tzegmott
+  ForwardAgent yes
+  SendEnv FRB_MASTER_ACCESS_TOKEN
+  SendEnv FRB_MASTER_REFRESH_TOKEN
+
+Host *.chime
+  ProxyJump nubular
+  User tzegmott
+  ForwardAgent yes
+  SendEnv FRB_MASTER_ACCESS_TOKEN
+  SendEnv FRB_MASTER_REFRESH_TOKEN
+
+# KKO
+Host kko
+  HostName pco.chimenet.ca
+  User tzegmott
+  ForwardAgent yes
+  SendEnv FRB_MASTER_ACCESS_TOKEN
+  SendEnv FRB_MASTER_REFRESH_TOKEN
+
+Host *.allenby
+  ProxyJump kko
+  User tzegmott
+  ForwardAgent yes
+  SendEnv FRB_MASTER_ACCESS_TOKEN
+  SendEnv FRB_MASTER_REFRESH_TOKEN
+
+# GBO
+Host gbo
+  HostName ssh.gb.nrao.edu
+  User tzegmott
+  ForwardAgent yes
+  SendEnv FRB_MASTER_ACCESS_TOKEN
+  SendEnv FRB_MASTER_REFRESH_TOKEN
+  LocalForward 10090 192.33.116.18:80
+
+Host garc
+  HostName arc.gb.nrao.edu
+  ProxyJump gbo
+  User tzegmott
+  ForwardAgent yes
+  SendEnv FRB_MASTER_ACCESS_TOKEN
+  SendEnv FRB_MASTER_REFRESH_TOKEN
+
+Host gbogw
+  HostName chime.gb.nrao.edu
+  ProxyJump nubular
+  User tzegmott
+  ForwardAgent yes
+  SendEnv FRB_MASTER_ACCESS_TOKEN
+  SendEnv FRB_MASTER_REFRESH_TOKEN
+
+Host *.gbo
+  ProxyJump gbogw
+  User tzegmott
+  ForwardAgent yes
+  SendEnv FRB_MASTER_ACCESS_TOKEN
+  SendEnv FRB_MASTER_REFRESH_TOKEN
+
+# HCO Testbed
+Host h*.hco
+  ProxyJump testbed
+  User tzegmott
+  ForwardAgent yes
+
+Host s*.hco
+  ProxyJump testbed
+  User frbadmin
+  ForwardAgent yes
+
+Host testbed
+  User tzegmott
+  HostName chimefrb-testbed.physics.mcgill.ca
+  ForwardAgent yes
+
+# Compute Canada
+Host *.computecanada.ca
+  User tzegmott

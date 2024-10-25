@@ -1,0 +1,27 @@
+inc 20240603T190413Z - 20240603T204957Z # #85 "85: [BUG] `datatrail scout`: Improve error handling" "CHIMEFRB/DATATRAIL-CLI" issue
+inc 20240604T140000Z - 20240604T160600Z # #85 "85: [BUG] `datatrail scout`: Improve error handling" "CHIMEFRB/DATATRAIL-CLI" issue
+inc 20240604T171600Z - 20240604T210000Z # #344 "344: [FEAT] Add healing endpoint for datatrail scout" "CHIMEFRB/DATATRAIL" issue
+inc 20240605T140000Z - 20240605T165400Z # #344 "344: [FEAT] Add healing endpoint for datatrail scout" "CHIMEFRB/DATATRAIL" issue
+inc 20240605T173000Z - 20240605T210000Z # #344 "344: [FEAT] Add healing endpoint for datatrail scout" "CHIMEFRB/DATATRAIL" issue
+inc 20240606T140000Z - 20240606T155000Z # "NRC Security Screening"
+inc 20240606T160400Z - 20240606T202700Z # #86 "86: [FEATURE] `datatrail scout`: Create and submit healing payload for files missing MINOC replica" "CHIMEFRB/DATATRAIL-CLI" issue
+inc 20240607T170000Z - 20240607T180000Z # Call "HCO Commissioning"
+inc 20240607T180000Z - 20240607T183000Z # Call "PO Stand Up"
+inc 20240610T140000Z - 20240610T150000Z # Datatrail GBO "Little Fire"
+inc 20240610T150000Z - 20240610T160000Z # GBO "Little Fire" "N Squared Data"
+inc 20240611T134800Z - 20240611T141049Z # #340 "340: May 2024: partially replicated `chime.event.baseband.raw` events" "CHIMEFRB/DATATRAIL" issue
+inc 20240611T142147Z - 20240611T145645Z # #347 "347: KKO events missing from datatrail" "CHIMEFRB/DATATRAIL" issue
+inc 20240611T150002Z - 20240611T153046Z # #350 "350: Modify the deletion policy for GBO n squared data" "CHIMEFRB/DATATRAIL" issue
+inc 20240612T180000Z - 20240612T183900Z # Call "PO Stand Up"
+inc 20240614T161900Z - 20240614T170016Z # #91 "91: Make the scout command take the scope and name in the same order as other commands" "CHIMEFRB/DATATRAIL-CLI" issue
+inc 20240614T193235Z - 20240614T193303Z # #12 "12: Move data to new path" "CHIMEFRB/FRB-EXPOSURE" issue
+inc 20240617T165158Z - 20240617T170100Z # #231 "231: Is there documentation about how datatrails is currently deployed for CHIME?" "CHIMEFRB/DATATRAIL-ADMIN" issue
+inc 20240617T170500Z - 20240617T180000Z # Call "Outrigger Commissioning"
+inc 20240617T180000Z - 20240617T183000Z # Call "PO Stand Up"
+inc 20240617T183000Z - 20240617T184400Z # Call General
+inc 20240617T200000Z - 20240617T203000Z # Meeting Vicky
+inc 20240625T183000Z - 20240625T190000Z # Call "PO Stand Up"
+inc 20240625T193000Z - 20240625T203000Z # Call SysAdmin
+inc 20240626T140000Z - 20240626T160000Z # "System's Overview"
+inc 20240626T190000Z - 20240626T210000Z # Ketan "Work Session"
+inc 20240627T190000Z - 20240627T210000Z # Ketan "Work Session"

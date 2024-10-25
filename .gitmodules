@@ -1,0 +1,6 @@
+[submodule "nu_scripts"]
+	path = dot_nushell/nu_scripts
+	url = https://github.com/nushell/nu_scripts
+[submodule "nushell-config"]
+	path = dot_nushell/nushell-config
+	url = https://github.com/drbrain/nushell-config

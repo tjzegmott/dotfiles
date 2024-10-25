@@ -1,0 +1,51 @@
+# PhD
+Host astro
+  User YORP
+  HostName astro.kent.ac.uk
+
+Host sega
+  User sega
+  HostName sega.kent.ac.uk
+  ProxyJump astro
+  RequestTTY yes
+  ForwardX11 yes
+
+Host tor
+  User tjz2
+  HostName tor.kent.ac.uk
+  ProxyJump astro
+  RequestTTY yes
+  ForwardX11 yes
+
+Host danish-old
+  User nbi
+  HostName dk154-storage.asu.cas.cz
+
+Host danish
+  User nbi
+  HostName dk154-storage1.asu.cas.cz
+
+Host ing
+  User tarik
+  HostName ra1.ing.iac.es
+  # HostName ra2.ing.iac.es
+  ForwardX11 yes
+
+Host deimos
+  User tarik
+  HostName deimos.ing.iac.es
+  ForwardX11 yes
+
+Host intdrpc1
+  User intobs
+  HostName intdrpc1
+  ForwardX11 yes
+  ProxyJump ing
+
+Host euronear
+  User tarik
+  HostName www.euronear.org
+
+Host sspserver
+  User sspcapsserver
+  HostName dhcp185c.kent.ac.uk

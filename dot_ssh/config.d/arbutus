@@ -1,0 +1,10 @@
+# HCO Testbed
+Host arbutus
+  User ubuntu
+  ForwardAgent yes
+  HostName 206.12.102.1
+
+Host *.arbutus
+  ProxyJump arbutus
+  User ubuntu
+  ForwardAgent yes
