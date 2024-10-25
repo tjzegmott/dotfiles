@@ -1,0 +1,11 @@
+[edit]
+  command = "nvim"
+
+[diff]
+  command = "delta"
+  pager = "delta"
+  args = ["-s"]
+
+[merge]
+  command = "nvim"
+  args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Source {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
