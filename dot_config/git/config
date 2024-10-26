@@ -65,6 +65,7 @@ helper = !~/.nix-profile/bin/gh auth git-credential
   email = "tzegmott@gmail.com"
   name = "Tarik Zegmott"
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDBx0oYd5GgtBvf93MkQFMxWwOg+6bKSNOLa6G+qRMl6 YORP
+  #{{ onepasswordRead "op://gv2pj3dcyg2wxx3ahtvgdamp2e/dv6xj4ndkqmenm63d3f45dts3e/token" "EI6GPO6VNJAVLGDDID3B75JI6E" }}
 
 # Configuration for CHIME
 [includeIf "gitdir:~/Workspace/CHIME/"]

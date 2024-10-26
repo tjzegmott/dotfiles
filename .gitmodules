@@ -4,3 +4,6 @@
 [submodule "nushell-config"]
 	path = dot_nushell/nushell-config
 	url = https://github.com/drbrain/nushell-config
+[submodule "tmux-plugins/tpm"]
+	path = dot_config/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git
