@@ -2,7 +2,7 @@ os:
   editPreset: "nvim"
 customCommands:
   - key: "C"
-    command: "git cz commit -s"
+    command: "cz commit -- -s"
     context: "files"
     loadingText: "opening commitizen commit tool"
     subprocess: true
