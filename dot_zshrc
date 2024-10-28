@@ -39,6 +39,13 @@ alias t="tmux"
 alias sb="cd /Users/tarikzegmott/Workspace/Obsidian/second-brain/ && nv home.md"
 alias o="/usr/bin/open"
 
+# Dirs
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+
 # DS9
 alias ds9="ds9 -view layout vertical -view buttons no -view colorbar no"
 
