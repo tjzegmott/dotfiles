@@ -22,10 +22,10 @@ export NVIM_APPNAME="LazyVim"
 
 _set_chime_tokens() {
   # CHIME FRB API
-  export CHIME_FRB_ACCESS_TOKEN=$(op item get chime\ frb\ tokens --vault chime --fields Access.token)
-  export CHIME_FRB_REFRESH_TOKEN=$(op item get chime\ frb\ tokens --vault chime --fields Refresh.token)
-  export FRB_MASTER_ACCESS_TOKEN=$(op item get chime\ frb\ tokens --vault chime --fields Access.token)
-  export FRB_MASTER_REFRESH_TOKEN=$(op item get chime\ frb\ tokens --vault chime --fields Refresh.token)
+  export CHIME_FRB_ACCESS_TOKEN=$(op item get chime\ frb\ tokens --vault chime --fields Access.token --reveal)
+  export CHIME_FRB_REFRESH_TOKEN=$(op item get chime\ frb\ tokens --vault chime --fields Refresh.token --reveal)
+  export FRB_MASTER_ACCESS_TOKEN=$(op item get chime\ frb\ tokens --vault chime --fields Access.token --reveal)
+  export FRB_MASTER_REFRESH_TOKEN=$(op item get chime\ frb\ tokens --vault chime --fields Refresh.token --reveal)
 }
 
 ## Aliases
