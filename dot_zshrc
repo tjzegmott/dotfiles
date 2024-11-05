@@ -34,7 +34,7 @@ alias nv="nvim"
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias ping="prettyping --nolegend"
 alias cat="bat"
-alias nu="/opt/homebrew/bin/nu --config ~/.nushell/config.nu --env-config ~/.nushell/env.nu"
+alias nu="nu --config ~/.nushell/config.nu --env-config ~/.nushell/env.nu"
 alias t="tmux"
 alias sb="cd /Users/tarikzegmott/Workspace/Obsidian/second-brain/ && nv home.md"
 alias o="/usr/bin/open"
@@ -77,7 +77,6 @@ fi
 # bun completions
 [ -s "/Users/tarikzegmott/.bun/_bun" ] && source "/Users/tarikzegmott/.bun/_bun"
 
-autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/mc mc
 
 # FZF Configuration
@@ -123,10 +122,19 @@ eval $(thefuck --alias)
 # ZSH Autosuggestions and Sytax highlighting
 source ~/.nix-profile/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.nix-profile/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+autoload -U +X bashcompinit && bashcompinit
 source ~/.zsh/plugins/completion.zsh
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
 # With Brew
 #source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 #source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Carapace Completions
+# export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+# zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+# zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+# zstyle ':completion:*:git:*' group-order 'main commands' 'alias commands' 'external commands'
+# source <(carapace _carapace)
 
 # Kubectl Autosuggestions
 source <(kubectl completion zsh)
@@ -157,6 +165,9 @@ alias cd=z
 
 # ATAC
 export ATAC_KEY_BINDINGS=/Users/tarikzegmott/.config/atac/keybindings/vim_key_bindings.toml
+
+# Atuin History
+eval "$(atuin init zsh)"
 
 # Direnv
 eval "$(direnv hook zsh)"
