@@ -122,3 +122,8 @@ $env.NVIM_APPNAME = "LazyVim"
 
 # OpenStack (Alliance Canada Arbutus Cloud)
 $env.OS_CLOUD = "arbutus"
+
+# Carapace completions
+$env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
+mkdir ~/.cache/carapace
+carapace _carapace nushell | save --force ~/.cache/carapace/init.nu

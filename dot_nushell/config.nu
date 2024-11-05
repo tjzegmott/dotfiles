@@ -879,6 +879,12 @@ use ~/.nushell/nu_scripts/themes/nu-themes/catppuccin-mocha.nu
 $env.config = ($env.config | merge {color_config: (catppuccin-mocha )})
 hide catppuccino-mocha
 
+# Init zoxide
+source ~/.nushell/zoxide.nu
+
+# Init Atuin
+source ~/.nushell/atuin.nu
+
 # CHIME FRB API
 def _set_chime_tokens [] {
     $env.CHIME_FRB_ACCESS_TOKEN = $"$(op item get 'chime frb tokens' --vault chime --fields Access.token)"
@@ -891,6 +897,7 @@ def _set_chime_tokens [] {
 alias nv = nvim
 alias lg = lazygit
 alias ld = lazydocker 
+alias k = kubectl
 alias du = ncdu --color dark -rr -x --exclude .git --exclude node_modules
 alias ping = prettyping --nolegend
 alias cat = bat
@@ -899,3 +906,6 @@ alias t = tmux
 alias sb = cd /Users/tarikzegmott/Workspace/Obsidian/second-brain/
 alias o = /usr/bin/open
 # alias cd = z
+
+# Carapace completions (run after config in env)
+source ~/.cache/carapace/init.nu
