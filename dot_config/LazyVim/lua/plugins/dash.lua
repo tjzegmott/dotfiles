@@ -27,14 +27,14 @@ ________/\\\\\\\\\__/\\\________/\\\__/\\\\\\\\\\\__/\\\\____________/\\\\__/\\\
       opts.config.header = vim.split(logo, "\n")
     end,
   },
-  {
-    "folke/drop.nvim",
-    event = "VimEnter",
-    config = function()
-      require("drop").setup({
-        theme = require("util.dashboard.config").get_theme().name,
-        screensaver = false,
-      })
-    end,
-  },
+  -- {
+  --   "folke/drop.nvim",
+  --   event = "VimEnter",
+  --   config = function()
+  --     require("drop").setup({
+  --       theme = require("util.dashboard.config").get_theme().name,
+  --       screensaver = false,
+  --     })
+  --   end,
+  -- },
 }
