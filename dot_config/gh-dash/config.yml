@@ -70,6 +70,12 @@ keybindings:
           gh issue develop -c {{.IssueNumber}}
           nvim
         '
+    - key: p
+      name: Create PR
+      command: >
+        tmux split-window -h -c {{.RepoPath}} '
+          nvim -c ":Octo pr create {{.IssueNumber}}"
+        '
   prs:
     - key: C
       command: >
