@@ -7,14 +7,10 @@ fi
 # 
 export PATH=$PATH\:/usr/local/bin/
 export PATH=$PATH\:/Users/tarikzegmott/Software/src/bin/
-export PATH=$PATH\:/opt/homebrew/bin/
-export PATH=$PATH\:$(brew --prefix)/Caskroom/miniconda/base/bin/
 export PATH=$PATH\:/Users/tarikzegmott/.iraf/bin/  # Setup iraf commands
 # photometry pipeline setup
 export PHOTPIPEDIR=/Users/tarikzegmott/Software/photometrypipeline/
 export PATH=$PATH\:$PHOTPIPEDIR
-# Add PostgreSQL to PATH
-export PATH=$PATH\:/opt/homebrew/opt/postgresql@13/bin/
 # Set PATH, MANPATH, etc., for Homebrew. # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(brew shellenv)"
 
@@ -47,13 +43,22 @@ alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 
 # DS9
-alias ds9="ds9 -view layout vertical -view buttons no -view colorbar no"
+if type -p ds9 &>/dev/null
+then
+  alias ds9="ds9 -view layout vertical -view buttons no -view colorbar no"
+fi
 
 # IRAF
-alias iraf="xgterm -geometry 80x20 -bg lavender -fg navy -sb -sl 2000 -fn 10x20 -T IRAF -e ecl &"
+if type -p ecl &>/dev/null && type -p xgterm &>/dev/null
+then
+  alias iraf="xgterm -geometry 80x20 -bg lavender -fg navy -sb -sl 2000 -fn 10x20 -T IRAF -e ecl &"
+fi
 
 # VO Tools
-alias jskycalc="java -jar ~/Applications/JSkyCalc.jar"
+if [[ -f ~/Applications/JSkyCalc.jar ]] && type -p java &>/dev/null
+then
+  alias jskycalc="java -jar ~/Applications/JSkyCalc.jar"
+fi
 
 # Quick look
 alias qlf="qlmanage -p \!:1"
@@ -76,8 +81,6 @@ fi
 
 # bun completions
 [ -s "/Users/tarikzegmott/.bun/_bun" ] && source "/Users/tarikzegmott/.bun/_bun"
-
-complete -o nospace -C /opt/homebrew/bin/mc mc
 
 # FZF Configuration
 eval "$(fzf --zsh)"
@@ -122,7 +125,6 @@ eval $(thefuck --alias)
 # ZSH Autosuggestions and Sytax highlighting
 source ~/.nix-profile/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.nix-profile/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-autoload -U +X bashcompinit && bashcompinit
 source ~/.zsh/plugins/completion.zsh
 zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
 # With Brew
@@ -131,9 +133,6 @@ zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
 
 # Carapace Completions
 # export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
-# zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
-# zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-# zstyle ':completion:*:git:*' group-order 'main commands' 'alias commands' 'external commands'
 # source <(carapace _carapace)
 
 # Kubectl Autosuggestions
@@ -145,16 +144,13 @@ source <(helm completion zsh)
 
 # Add Krew to PATH
 # - Krew is a K8s package manager: Kubernetes + Brew = Krew
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH="$PATH:${KREW_ROOT:-$HOME/.krew}/bin"
 
 # Add Krew MinIO Autosuggestions
 source <(k minio completion zsh)
 
 # OpenStack (Alliance Canada Arbutus Cloud)
 export OS_CLOUD=arbutus
-
-# Oh My Posh
-eval "$(oh-my-posh init zsh --config ~/.oh-my-posh/themes/catppuccin.omp.json)" 
 
 # Eza (better ls)
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --grid"
@@ -167,13 +163,17 @@ alias cd=z
 export ATAC_KEY_BINDINGS=/Users/tarikzegmott/.config/atac/keybindings/vim_key_bindings.toml
 
 # Atuin History
-eval "$(atuin init zsh)"
+eval "$(atuin init zsh --disable-up-arrow)"
+source <(atuin gen-completions --shell zsh)
 
 # Direnv
 eval "$(direnv hook zsh)"
+
+# Oh My Posh
+eval "$(oh-my-posh init zsh --config ~/.oh-my-posh/themes/catppuccin.omp.json)" 
 
 # Set up history
 export HISTSIZE=SAVEHIST=10000
 setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_DUPS
-export HISTIGNORE="pwd:ls:cd"
+export HISTIGNORE="pwd:ls:cd:man"
