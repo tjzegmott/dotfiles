@@ -132,8 +132,8 @@ zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
 #source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Carapace Completions
-# export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
-# source <(carapace _carapace)
+export CARAPACE_BRIDGES='zsh,nushell,bash' # optional
+source <(carapace _carapace)
 
 # Kubectl Autosuggestions
 source <(kubectl completion zsh)
