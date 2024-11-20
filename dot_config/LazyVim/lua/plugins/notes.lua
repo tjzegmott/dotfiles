@@ -76,6 +76,12 @@ return {
       desc = "New note",
       ft = "markdown",
     },
+    {
+      "<leader>oN",
+      "<cmd>ObsidianNewFromTemplate<cr>",
+      desc = "New note using template",
+      ft = "markdown",
+    },
     -- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
     -- ["gf"] = {
     --   action = function()
