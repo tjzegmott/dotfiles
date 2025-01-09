@@ -6,11 +6,14 @@ if [[ -f /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh ]]; then
 fi
 # 
 export PATH=$PATH\:/usr/local/bin/
-export PATH=$PATH\:/Users/tarikzegmott/Software/src/bin/
-export PATH=$PATH\:/Users/tarikzegmott/.iraf/bin/  # Setup iraf commands
+export PATH=$PATH\:/opt/homebrew/bin/
+# Astronomy Tools/Scripts
+# export PATH=$PATH\:/Users/tarikzegmott/Software/src/bin/
+# export PATH=$PATH\:/Users/tarikzegmott/.iraf/bin/  # Setup iraf commands
 # photometry pipeline setup
-export PHOTPIPEDIR=/Users/tarikzegmott/Software/photometrypipeline/
-export PATH=$PATH\:$PHOTPIPEDIR
+# export PHOTPIPEDIR=/Users/tarikzegmott/Software/photometrypipeline/
+# export PATH=$PATH\:$PHOTPIPEDIR
+
 # Set PATH, MANPATH, etc., for Homebrew. # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(brew shellenv)"
 
