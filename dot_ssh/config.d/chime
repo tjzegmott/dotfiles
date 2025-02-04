@@ -77,18 +77,23 @@ Host *.gbo
 
 # HCO Testbed
 Host h*.hco
-  ProxyJump testbed
+  ProxyJump hco
   User tzegmott
   ForwardAgent yes
 
 Host s*.hco
-  ProxyJump testbed
+  ProxyJump hco
   User frbadmin
   ForwardAgent yes
 
-Host testbed
+Host hco
   User tzegmott
-  HostName chimefrb-testbed.physics.mcgill.ca
+  HostName chime.hcro.org
+  ForwardAgent yes
+
+Host hco-backup
+  User tzegmott
+  HostName chime-ssh.hcro.org
   ForwardAgent yes
 
 # Compute Canada
