@@ -1,0 +1,6 @@
+[papers]
+dir = ~/Documents/Papers
+
+[settings]
+default-library = papers
+
