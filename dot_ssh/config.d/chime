@@ -76,16 +76,6 @@ Host *.gbo
   SendEnv FRB_MASTER_REFRESH_TOKEN
 
 # HCO Testbed
-Host h*.hco
-  ProxyJump hco
-  User tzegmott
-  ForwardAgent yes
-
-Host s*.hco
-  ProxyJump hco
-  User frbadmin
-  ForwardAgent yes
-
 Host hco
   User tzegmott
   HostName chime.hcro.org
@@ -94,6 +84,20 @@ Host hco
 Host hco-backup
   User tzegmott
   HostName chime-ssh.hcro.org
+  ForwardAgent yes
+
+Host hups.hco
+  User frbadmin
+
+Host hpdu.hco
+  User admin
+
+Host henviromux.hco
+  User admin
+
+Host h*.hco
+  ProxyJump hco
+  User tzegmott
   ForwardAgent yes
 
 # Compute Canada
