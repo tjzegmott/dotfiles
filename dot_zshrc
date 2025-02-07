@@ -156,8 +156,8 @@ source <(k minio completion zsh)
 export OS_CLOUD=arbutus
 
 # Eza (better ls)
-alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --grid"
-alias l="eza --color=always --long --git --icons=always --no-time"
+alias ls="eza --color=always --long --git --no-filesize --icons --no-time --no-user --no-permissions --grid"
+alias l="eza --color=always --long --git --icons --no-time"
 
 # Zoxide
 eval "$(zoxide init zsh)"
