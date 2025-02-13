@@ -20,6 +20,7 @@ Host nubular
   ForwardAgent yes
   SendEnv FRB_MASTER_ACCESS_TOKEN
   SendEnv FRB_MASTER_REFRESH_TOKEN
+  SendEnv IPMI_PASSWORD
 
 Host *.chime
   ProxyJump nubular
@@ -67,6 +68,7 @@ Host gbogw
   ForwardAgent yes
   SendEnv FRB_MASTER_ACCESS_TOKEN
   SendEnv FRB_MASTER_REFRESH_TOKEN
+  SendEnv IPMI_PASSWORD
 
 Host *.gbo
   ProxyJump gbogw
@@ -74,6 +76,7 @@ Host *.gbo
   ForwardAgent yes
   SendEnv FRB_MASTER_ACCESS_TOKEN
   SendEnv FRB_MASTER_REFRESH_TOKEN
+  SendEnv IPMI_PASSWORD
 
 # HCO Testbed
 Host hco
