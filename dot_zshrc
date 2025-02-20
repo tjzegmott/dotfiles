@@ -8,10 +8,10 @@ fi
 export PATH=$PATH\:/usr/local/bin/
 export PATH=$PATH\:/opt/homebrew/bin/
 # Astronomy Tools/Scripts
-# export PATH=$PATH\:/Users/tarikzegmott/Software/src/bin/
-# export PATH=$PATH\:/Users/tarikzegmott/.iraf/bin/  # Setup iraf commands
+# export PATH=$PATH\:/Users/$USER/Software/src/bin/
+# export PATH=$PATH\:/Users/$USER/.iraf/bin/  # Setup iraf commands
 # photometry pipeline setup
-# export PHOTPIPEDIR=/Users/tarikzegmott/Software/photometrypipeline/
+# export PHOTPIPEDIR=/Users/$USER/Software/photometrypipeline/
 # export PATH=$PATH\:$PHOTPIPEDIR
 
 # Set PATH, MANPATH, etc., for Homebrew. # Set PATH, MANPATH, etc., for Homebrew.
@@ -35,7 +35,7 @@ alias ping="prettyping --nolegend"
 alias cat="bat"
 alias nu="nu --config ~/.nushell/config.nu --env-config ~/.nushell/env.nu"
 alias t="tmux"
-alias sb="cd /Users/tarikzegmott/Workspace/Obsidian/second-brain/ && nv home.md"
+alias sb="cd /Users/$USER/Workspace/Obsidian/second-brain/ && nv home.md"
 alias o="/usr/bin/open"
 
 # Dirs
@@ -83,7 +83,7 @@ then
 fi
 
 # bun completions
-[ -s "/Users/tarikzegmott/.bun/_bun" ] && source "/Users/tarikzegmott/.bun/_bun"
+[ -s "/Users/$USER/.bun/_bun" ] && source "/Users/$USER/.bun/_bun"
 
 # FZF Configuration
 eval "$(fzf --zsh)"
@@ -119,7 +119,7 @@ export FZF_DEFAULT_OPTS="--color=fg:${fg},hl:${purple},fg+:${fg},hl+:${purple},i
 
 # 1password
 eval "$(op completion zsh)"; compdef _op op
-source /Users/tarikzegmott/.config/op/plugins.sh
+source /Users/$USER/.config/op/plugins.sh
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 
 # TheFuck
@@ -164,7 +164,7 @@ eval "$(zoxide init zsh)"
 alias cd=z
 
 # ATAC
-export ATAC_KEY_BINDINGS=/Users/tarikzegmott/.config/atac/keybindings/vim_key_bindings.toml
+export ATAC_KEY_BINDINGS=/Users/$USER/.config/atac/keybindings/vim_key_bindings.toml
 
 # Atuin History
 eval "$(atuin init zsh --disable-up-arrow)"
