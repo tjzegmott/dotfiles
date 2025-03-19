@@ -37,6 +37,11 @@ Host kko
   SendEnv FRB_MASTER_ACCESS_TOKEN
   SendEnv FRB_MASTER_REFRESH_TOKEN
 
+Host kko-backup
+  HostName 64.141.73.219
+  User tzegmott
+  ForwardAgent yes
+
 Host *.allenby
   ProxyJump kko
   User tzegmott
