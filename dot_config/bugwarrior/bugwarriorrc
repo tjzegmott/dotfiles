@@ -3,7 +3,7 @@
 # Here you define a comma separated list of targets.  Each of them must have a
 # section below determining their properties, how to query them, etc.  The name
 # is just a symbol, and doesn't have any functional importance.
-targets = chime_github
+targets = chime_github,chime_experiment_github
 
 # If unspecified, the default taskwarrior config will be used.
 #taskrc = /path/to/.taskrc
@@ -129,6 +129,19 @@ github.project_template = {{githubrepo|upper}}
 # causes imported issues to be assigned to the ‘Office’ project regardless of what project
 # was assigned by the service itself:
 # github.project_template = Office
+
+
+[chime_experiment_github]
+service = github
+github.username = chime-experiment
+github.login = tjzegmott
+github.password = @oracle:eval:gh auth token
+github.only_if_assigned = tjzegmott
+github.filter_pull_requests = True
+github.default_priority = M
+github.add_tags = #{{githubnumber}}, {{githubtype}}
+github.description_template = {{githubnumber}}: {{githubtitle}}
+github.project_template = {{githubrepo|upper}}
 
 
 # Here's an example of a trac target.
