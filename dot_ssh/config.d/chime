@@ -42,7 +42,12 @@ Host kko-backup
   User tzegmott
   ForwardAgent yes
 
-Host *.allenby
+Host kko-ssh
+  HostName 72.139.226.245
+  User tzegmott
+  ForwardAgent yes
+
+Host *.kko
   ProxyJump kko
   User tzegmott
   ForwardAgent yes
