@@ -29,13 +29,13 @@ _set_chime_tokens() {
 
 ## Aliases
 alias ql="qlmanage -p"
-alias nv="nvim"
+alias n="nvim"
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias ping="prettyping --nolegend"
 alias cat="bat"
 alias nu="nu --config ~/.nushell/config.nu --env-config ~/.nushell/env.nu"
 alias t="tmux"
-alias sb="cd /Users/$USER/Workspace/Obsidian/second-brain/ && nv home.md"
+alias sb="cd /Users/$USER/Workspace/Obsidian/second-brain/ && nvim home.md"
 alias o="/usr/bin/open"
 
 # Dirs
@@ -149,8 +149,9 @@ source <(helm completion zsh)
 # - Krew is a K8s package manager: Kubernetes + Brew = Krew
 export PATH="$PATH:${KREW_ROOT:-$HOME/.krew}/bin"
 
-# Add Krew MinIO Autosuggestions
+# Add Krew Plugin Autosuggestions
 source <(k minio completion zsh)
+source <( k cnpg completion zsh)
 
 # OpenStack (Alliance Canada Arbutus Cloud)
 export OS_CLOUD=arbutus
@@ -181,3 +182,5 @@ export HISTSIZE=SAVEHIST=10000
 setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_DUPS
 export HISTIGNORE="pwd:ls:cd:man"
+
+export EDITOR=nvim
