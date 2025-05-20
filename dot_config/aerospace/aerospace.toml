@@ -54,11 +54,11 @@ on-focus-changed = "move-mouse window-lazy-center"
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
 inner.horizontal = 18
-inner.vertical =   18
-outer.left =       18
-outer.bottom =     18
-outer.top =        18
-outer.right =      18
+inner.vertical = 18
+outer.left = 18
+outer.bottom = 18
+outer.top = 18
+outer.right = 18
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -170,7 +170,10 @@ esc = 'mode main'
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
 #s = ['layout sticky tiling', 'mode main'] # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
-f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
+f = [
+  'layout floating tiling',
+  'mode main',
+] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 
 alt-shift-h = ['join-with left', 'mode main']
@@ -195,7 +198,15 @@ if.app-id = 'com.apple.mail'
 run = "move-node-to-workspace M"
 
 [[on-window-detected]]
+if.app-id = 'notion.mail.id'
+run = "move-node-to-workspace M"
+
+[[on-window-detected]]
 if.app-id = 'com.cron.electron'
+run = "move-node-to-workspace C"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.iCal'
 run = "move-node-to-workspace C"
 
 [[on-window-detected]]
