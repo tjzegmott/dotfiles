@@ -104,10 +104,10 @@ $env.PATH = ($env.PATH | split row (char esep) | prepend '/usr/local/bin/')
 $env.PATH = ($env.PATH | split row (char esep) | prepend '~/.nix-profile/bin/')
 $env.PATH = ($env.PATH | split row (char esep) | prepend '/opt/homebrew/bin/')
 $env.PATH = ($env.PATH | split row (char esep) | prepend '/opt/homebrew/sbin/')
-$env.PATH = ($env.PATH | split row (char esep) | prepend '/Users/tarikzegmott/Software/src/bin/')
-$env.PATH = ($env.PATH | split row (char esep) | prepend '/Users/tarikzegmott/.iraf/bin/')  # Setup iraf commands
-$env.PATH = ($env.PATH | split row (char esep) | prepend '/Users/tarikzegmott/Software/photometrypipeline/') # photometry pipeline setup
-$env.PATH = ($env.PATH | split row (char esep) | prepend '/Users/tarikzegmott/.local/bin/')
+$env.PATH = ($env.PATH | split row (char esep) | prepend '/Users/tzegmott/Software/src/bin/')
+$env.PATH = ($env.PATH | split row (char esep) | prepend '/Users/tzegmott/.iraf/bin/')  # Setup iraf commands
+$env.PATH = ($env.PATH | split row (char esep) | prepend '/Users/tzegmott/Software/photometrypipeline/') # photometry pipeline setup
+$env.PATH = ($env.PATH | split row (char esep) | prepend '/Users/tzegmott/.local/bin/')
 # Set PATH, MANPATH, etc., for Homebrew. # Set PATH, MANPATH, etc., for Homebrew.
 # eval "$(/opt/homebrew/bin/brew shellenv)"
 

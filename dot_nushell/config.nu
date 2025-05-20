@@ -215,8 +215,9 @@ $env.config = {
     }
 
     filesize: {
-        metric: true # true => KB, MB, GB (ISO standard), false => KiB, MiB, GiB (Windows standard)
-        format: "auto" # b, kb, kib, mb, mib, gb, gib, tb, tib, pb, pib, eb, eib, auto
+        # metric: true # true => KB, MB, GB (ISO standard), false => KiB, MiB, GiB (Windows standard)
+        #format: "auto" # b, kb, kib, mb, mib, gb, gib, tb, tib, pb, pib, eb, eib, auto
+        unit: "metric"
     }
 
     cursor_shape: {
@@ -227,7 +228,7 @@ $env.config = {
 
     color_config: $dark_theme # if you want a more interesting theme, you can replace the empty record with `$dark_theme`, `$light_theme` or another custom record
     # use_grid_icons: true
-    footer_mode: "25" # always, never, number_of_rows, auto
+    footer_mode: "auto" # always, never, number_of_rows, auto
     float_precision: 2 # the precision for displaying floats in tables
     buffer_editor: "" # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL
     use_ansi_coloring: true
@@ -887,14 +888,14 @@ source ~/.nushell/atuin.nu
 
 # CHIME FRB API
 def _set_chime_tokens [] {
-    $env.CHIME_FRB_ACCESS_TOKEN = $"$(op item get 'chime frb tokens' --vault chime --fields Access.token)"
-    $env.CHIME_FRB_REFRESH_TOKEN = $"$(op item get 'chime frb tokens' --vault chime --fields Refresh.token)"
-    $env.FRB_MASTER_ACCESS_TOKEN = $"$(op item get 'chime frb tokens' --vault chime --fields Access.token)"
-    $env.FRB_MASTER_REFRESH_TOKEN = $"$(op item get 'chime frb tokens' --vault chime --fields Refresh.token)"
+    $env.CHIME_FRB_ACCESS_TOKEN = $"$(op item get 'chime frb tokens' --vault chime --fields Access.token --reveal)"
+    $env.CHIME_FRB_REFRESH_TOKEN = $"$(op item get 'chime frb tokens' --vault chime --fields Refresh.token --reveal)"
+    $env.FRB_MASTER_ACCESS_TOKEN = $"$(op item get 'chime frb tokens' --vault chime --fields Access.token --reveal)"
+    $env.FRB_MASTER_REFRESH_TOKEN = $"$(op item get 'chime frb tokens' --vault chime --fields Refresh.token --reveal)"
 }
 
 # Aliases
-alias nv = nvim
+alias n = nvim
 alias lg = lazygit
 alias ld = lazydocker 
 alias k = kubectl
@@ -903,7 +904,7 @@ alias ping = prettyping --nolegend
 alias cat = bat
 alias help = tldr
 alias t = tmux
-alias sb = cd /Users/tarikzegmott/Workspace/Obsidian/second-brain/
+alias sb = cd /Users/tzegmott/Workspace/Obsidian/second-brain/
 alias o = /usr/bin/open
 # alias cd = z
 
