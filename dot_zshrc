@@ -37,6 +37,7 @@ alias nu="nu --config ~/.nushell/config.nu --env-config ~/.nushell/env.nu"
 alias t="tmux"
 alias sb="cd /Users/$USER/Workspace/Obsidian/second-brain/ && nvim home.md"
 alias o="/usr/bin/open"
+alias ve="eval $(poetry env activate)"
 
 # Dirs
 alias ..="cd .."
