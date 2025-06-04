@@ -1,8 +1,14 @@
 # Personal
 Host apollo
+  User tarikzegmott
+  ForwardAgent yes
+
+Host apollo.home
+  User tarikzegmott
   ForwardAgent yes
 
 Host extapollo
   HostName 69.156.66.222
+  User tarikzegmott
   Port 10922
   ForwardAgent yes
