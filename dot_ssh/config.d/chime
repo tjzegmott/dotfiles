@@ -61,7 +61,7 @@ Host gbo
   ForwardAgent yes
   SendEnv FRB_MASTER_ACCESS_TOKEN
   SendEnv FRB_MASTER_REFRESH_TOKEN
-  LocalForward 10090 192.33.116.18:80
+  LocalForward 10090 192.33.116.18:4443
 
 Host garc
   HostName arc.gb.nrao.edu
