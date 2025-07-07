@@ -83,7 +83,7 @@ keybindings:
           gh pr checkout {{.PrNumber}} &&
           nvim -c ":Octo pr edit {{.PrNumber}}"
         '
-    - key: v
+    - key: V
       command: >
         tmux split-window -h -c {{.RepoPath}} '
           nvim -c ":Octo pr edit {{.PrNumber}}"
