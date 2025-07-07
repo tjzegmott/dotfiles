@@ -112,7 +112,7 @@ github.default_priority = M
 # A comma-separated list of tags to add to an issue. In most cases, plain strings will 
 # suffice, but you can also specify templates. See the section Field Templates for more 
 # information.
-github.add_tags = #{{githubnumber}}, {{githubtype}}
+github.add_tags = #{{githubnumber}}, {{githubtype}}, {{githubrepo|lower}}
 
 # By default, Bugwarrior will import issues with a fairly verbose description template 
 # looking something like this:
@@ -123,7 +123,7 @@ github.description_template = {{githubnumber}}: {{githubtitle}}
 # You can also use this tool for altering the generated value of any other Taskwarrior 
 # record field by using the same kind of template.
 # Uppercasing the project name for imported issues:
-github.project_template = {{githubrepo|upper}}
+# github.project_template = {{githubrepo|upper}}
 
 # You can also use this feature to override the generated value of any field. This example
 # causes imported issues to be assigned to the ‘Office’ project regardless of what project
@@ -139,9 +139,9 @@ github.password = @oracle:eval:gh auth token
 github.only_if_assigned = tjzegmott
 github.filter_pull_requests = True
 github.default_priority = M
-github.add_tags = #{{githubnumber}}, {{githubtype}}
+github.add_tags = #{{githubnumber}}, {{githubtype}}, {{githubrepo|lower}}
 github.description_template = {{githubnumber}}: {{githubtitle}}
-github.project_template = {{githubrepo|upper}}
+# github.project_template = {{githubrepo|upper}}
 
 
 # Here's an example of a trac target.
