@@ -82,3 +82,39 @@ repositories:
   password: ""
   url: https://cloudnative-pg.github.io/charts
   username: ""
+- caFile: ""
+  certFile: ""
+  insecure_skip_tls_verify: false
+  keyFile: ""
+  name: kedacore
+  pass_credentials_all: false
+  password: ""
+  url: https://kedacore.github.io/charts
+  username: ""
+- caFile: ""
+  certFile: ""
+  insecure_skip_tls_verify: false
+  keyFile: ""
+  name: jetstack
+  pass_credentials_all: false
+  password: ""
+  url: https://charts.jetstack.io
+  username: ""
+- caFile: ""
+  certFile: ""
+  insecure_skip_tls_verify: false
+  keyFile: ""
+  name: prometheus-community
+  pass_credentials_all: false
+  password: ""
+  url: https://prometheus-community.github.io/helm-charts
+  username: ""
+- caFile: ""
+  certFile: ""
+  insecure_skip_tls_verify: false
+  keyFile: ""
+  name: cnpg-grafana
+  pass_credentials_all: false
+  password: ""
+  url: https://cloudnative-pg.github.io/grafana-dashboards
+  username: ""
