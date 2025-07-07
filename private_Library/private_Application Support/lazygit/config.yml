@@ -1,3 +1,5 @@
+git:
+  autoForwardBranches: allBranches
 os:
   editPreset: "nvim"
 customCommands:
@@ -5,13 +7,13 @@ customCommands:
     command: "cz commit -- -s"
     context: "files"
     loadingText: "opening commitizen commit tool"
-    subprocess: true
+    # subprocess: true
   - key: "o"
     command: "nvim -c ':Octo pr create'"
     context: "localBranches"
     loadingText: "Loading Octo"
     description: "Open pull request with Octo"
-    subprocess: true
+    # subprocess: true
 # keybinding:
 #   branches:
 # createPullRequest: "O"
