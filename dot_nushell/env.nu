@@ -108,6 +108,7 @@ $env.PATH = ($env.PATH | split row (char esep) | prepend '/Users/tzegmott/Softwa
 $env.PATH = ($env.PATH | split row (char esep) | prepend '/Users/tzegmott/.iraf/bin/')  # Setup iraf commands
 $env.PATH = ($env.PATH | split row (char esep) | prepend '/Users/tzegmott/Software/photometrypipeline/') # photometry pipeline setup
 $env.PATH = ($env.PATH | split row (char esep) | prepend '/Users/tzegmott/.local/bin/')
+$env.PATH = ($env.PATH | split row (char esep) | prepend '/Users/tzegmott/.bun/bin/')
 $env.PATH = ($env.PATH | split row (char esep) | prepend '/nix/var/nix/profiles/default/bin/')
 # Set PATH, MANPATH, etc., for Homebrew. # Set PATH, MANPATH, etc., for Homebrew.
 # eval "$(/opt/homebrew/bin/brew shellenv)"

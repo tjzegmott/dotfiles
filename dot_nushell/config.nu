@@ -754,11 +754,11 @@ use ~/.nushell/nu_scripts/themes/nu-themes/catppuccin-latte.nu
 $env.config = ($env.config | merge {color_config: (catppuccin-latte )})
 hide catppuccino-mocha
 
-# Init zoxide
-source ~/.nushell/zoxide.nu
-
 # Init Atuin
 source ~/.nushell/atuin.nu
+
+# Init zoxide
+source ~/.nushell/zoxide.nu
 
 # CHIME FRB API
 def _set_chime_tokens [] {
