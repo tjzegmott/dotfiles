@@ -1,0 +1,19 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/yocpkr4vyv7r3kvbpipyrgdb4u/certificate-authority-data" "SPUPXKPSMZHKLDCTPJJPEPZJSY" }}
+    server: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/yocpkr4vyv7r3kvbpipyrgdb4u/hostname" "SPUPXKPSMZHKLDCTPJJPEPZJSY" }}
+  name: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/yocpkr4vyv7r3kvbpipyrgdb4u/name" "SPUPXKPSMZHKLDCTPJJPEPZJSY" }}
+contexts:
+- context:
+    cluster: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/yocpkr4vyv7r3kvbpipyrgdb4u/name" "SPUPXKPSMZHKLDCTPJJPEPZJSY" }}
+    user: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/pdkceseylofcmxndbgpfxsp3jq/name" "SPUPXKPSMZHKLDCTPJJPEPZJSY" }}
+  name: Arbutus-Admin
+current-context: Arbutus-Admin
+kind: Config
+preferences: {}
+users:
+- name: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/pdkceseylofcmxndbgpfxsp3jq/name" "SPUPXKPSMZHKLDCTPJJPEPZJSY" }}
+  user:
+    client-certificate-data: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/pdkceseylofcmxndbgpfxsp3jq/client-certificate-data" "SPUPXKPSMZHKLDCTPJJPEPZJSY" }}
+    client-key-data: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/pdkceseylofcmxndbgpfxsp3jq/client-key-data" "SPUPXKPSMZHKLDCTPJJPEPZJSY" }}
