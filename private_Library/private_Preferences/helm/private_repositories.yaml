@@ -118,3 +118,21 @@ repositories:
   password: ""
   url: https://cloudnative-pg.github.io/grafana-dashboards
   username: ""
+- caFile: ""
+  certFile: ""
+  insecure_skip_tls_verify: false
+  keyFile: ""
+  name: argo-cd
+  pass_credentials_all: false
+  password: ""
+  url: https://argoproj.github.io/argo-helm
+  username: ""
+- caFile: ""
+  certFile: ""
+  insecure_skip_tls_verify: false
+  keyFile: ""
+  name: passbolt
+  pass_credentials_all: false
+  password: ""
+  url: https://download.passbolt.com/charts/passbolt
+  username: ""
