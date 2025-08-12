@@ -1,0 +1,13 @@
+clouds:
+  arbutus:
+    auth:
+      username: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/t4pkw3mpeas5mwskjxifqlkkjq/username" }}
+      project_name: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/t4pkw3mpeas5mwskjxifqlkkjq/project_name" }}
+      project_id: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/t4pkw3mpeas5mwskjxifqlkkjq/project_id" }}
+      password: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/t4pkw3mpeas5mwskjxifqlkkjq/credential" }}
+      auth_url: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/t4pkw3mpeas5mwskjxifqlkkjq/auth_url" }}
+      user_domain_name: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/t4pkw3mpeas5mwskjxifqlkkjq/user_domain_name" }}
+      project_domain_id: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/t4pkw3mpeas5mwskjxifqlkkjq/project_domain_id" }}
+    region: RegionOne
+    interface: public
+    identity_api_version: 3
