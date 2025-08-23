@@ -1868,3 +1868,140 @@ txn:
   type: interval
   before: 
   after: {"id":1,"start":"20240730T114000Z","end":"20240730T114910Z","tags":["#155","155: Monitoring report not being generated daily","CHIMEFRB\/FRB_MONITORING","issue"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20250415T193529Z","tags":["#174","174: Investigate HTTP errors","CHIMEFRB\/DATATRAIL","issue"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20250415T193529Z","tags":["#174","174: Investigate HTTP errors","CHIMEFRB\/DATATRAIL","issue"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20250415T193529Z","end":"20250415T193555Z","tags":["#174","174: Investigate HTTP errors","CHIMEFRB\/DATATRAIL","issue"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20250416T130000Z","end":"20250416T140000Z","tags":["Call","Interview"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20250416T150000Z","end":"20250416T160000Z","tags":["Call","Interview"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20250416T163000Z","end":"20250416T170000Z","tags":["Call","PO Stand Up"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20250424T211631Z","tags":["#3","3: Network changes at KKO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20250424T211631Z","tags":["#3","3: Network changes at KKO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20250424T150000Z","tags":["#3","3: Network changes at KKO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20250424T150000Z","tags":["#3","3: Network changes at KKO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20250424T150000Z","end":"20250424T212224Z","tags":["#3","3: Network changes at KKO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20250425T203647Z","tags":["#3","3: Network changes at KKO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20250425T203647Z","tags":["#3","3: Network changes at KKO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20250425T203647Z","end":"20250425T203655Z","tags":["#3","3: Network changes at KKO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20250425T203647Z","end":"20250425T203655Z","tags":["#3","3: Network changes at KKO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20250425T140000Z","end":"20250425T203655Z","tags":["#3","3: Network changes at KKO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20250603T110604Z","tags":["#531","531: Outrigger Logging Requirements","CHIMEFRB\/OUTRIGGER-DEVOPS","issue"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20250603T110604Z","tags":["#531","531: Outrigger Logging Requirements","CHIMEFRB\/OUTRIGGER-DEVOPS","issue"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20250603T110604Z","end":"20250603T133902Z","tags":["#531","531: Outrigger Logging Requirements","CHIMEFRB\/OUTRIGGER-DEVOPS","issue"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20250603T110604Z","end":"20250603T133902Z","tags":["#531","531: Outrigger Logging Requirements","CHIMEFRB\/OUTRIGGER-DEVOPS","issue"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20250603T110604Z","end":"20250603T125400Z","tags":["#531","531: Outrigger Logging Requirements","CHIMEFRB\/OUTRIGGER-DEVOPS","issue"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20250610T150318Z","tags":["#4","4: Network changes at GBO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20250610T150318Z","tags":["#4","4: Network changes at GBO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20250610T150318Z","end":"20250610T150345Z","tags":["#4","4: Network changes at GBO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+  type: interval
+  before: 
+  after: {"id":1,"start":"20250610T150345Z","tags":["#4","4: Network changes at GBO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+txn:
+  type: interval
+  before: {"id":2,"start":"20250610T150318Z","end":"20250610T150345Z","tags":["#4","4: Network changes at GBO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":2,"start":"20250609T090000Z","end":"20250610T150345Z","tags":["#4","4: Network changes at GBO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+txn:
+  type: interval
+  before: {"id":2,"start":"20250609T090000Z","end":"20250610T150345Z","tags":["#4","4: Network changes at GBO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":2,"start":"20250609T090000Z","end":"20250609T163000Z","tags":["#4","4: Network changes at GBO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20250610T150345Z","tags":["#4","4: Network changes at GBO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20250610T090000Z","tags":["#4","4: Network changes at GBO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20250610T090000Z","tags":["#4","4: Network changes at GBO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20250610T090000Z","end":"20250610T151231Z","tags":["#4","4: Network changes at GBO","CHIMEFRB\/OUTRIGGER-NETWORK-DIAGRAMS","issue"]}
+txn:
+  type: interval
+  before: 
+  after: {"id":0,"start":"20250612T121003Z","tags":["#357","357: Clean up: remove unused endpoints","CHIMEFRB\/FRB-MASTER","issue"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20250612T121003Z","tags":["#357","357: Clean up: remove unused endpoints","CHIMEFRB\/FRB-MASTER","issue"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20250612T110223Z","tags":["#357","357: Clean up: remove unused endpoints","CHIMEFRB\/FRB-MASTER","issue"]}
+txn:
+  type: interval
+  before: {"id":1,"start":"20250612T110223Z","tags":["#357","357: Clean up: remove unused endpoints","CHIMEFRB\/FRB-MASTER","issue"]}
+  after: 
+  type: interval
+  before: 
+  after: {"id":1,"start":"20250612T110223Z","end":"20250612T121101Z","tags":["#357","357: Clean up: remove unused endpoints","CHIMEFRB\/FRB-MASTER","issue"]}
