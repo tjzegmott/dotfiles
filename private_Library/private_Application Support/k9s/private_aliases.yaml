@@ -8,3 +8,6 @@ aliases:
   rb: rolebindings
   np: networkpolicies
   h: helm
+  ir: ingressroutes
+  c: certificates
+  crs: certificaterequests
