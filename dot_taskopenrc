@@ -74,5 +74,5 @@ PATH_EXT=/nix/store/g07ziblnzyxd6xm45qbxms3nchv63242-taskopen-1.1.5/share/taskop
 nvimline.target=annotations
 nvimline.labelregex=".*"
 nvimline.regex="^nvimline:(\\d+):(.*)"
-nvimline.command="~/.config/taskwarrior-tui/shortcut-scripts/taksopen_line.sh $FILE $TASK_DESCRIPTION"
+nvimline.command="~/.config/taskwarrior-tui/shortcut-scripts/taskopen_line.sh $FILE $TASK_DESCRIPTION"
 nvimline.modes="batch,any,normal"
