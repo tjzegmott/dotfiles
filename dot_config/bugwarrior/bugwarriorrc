@@ -128,7 +128,7 @@ github.description_template = {{githubnumber}}: {{githubtitle}}
 # You can also use this feature to override the generated value of any field. This example
 # causes imported issues to be assigned to the ‘Office’ project regardless of what project
 # was assigned by the service itself:
-# github.project_template = Office
+github.project_template =
 
 
 [chime_experiment_github]
@@ -141,7 +141,7 @@ github.filter_pull_requests = True
 github.default_priority = M
 github.add_tags = #{{githubnumber}}, {{githubtype}}, {{githubrepo|lower}}
 github.description_template = {{githubnumber}}: {{githubtitle}}
-# github.project_template = {{githubrepo|upper}}
+github.project_template =
 
 
 # Here's an example of a trac target.
