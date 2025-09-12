@@ -1,5 +1,6 @@
 git:
   autoForwardBranches: allBranches
+  overrideGpg: true
 os:
   editPreset: "nvim"
 customCommands:
