@@ -2,7 +2,7 @@
 Host arbutus
   User ubuntu
   ForwardAgent yes
-  HostName 206.12.102.1
+  HostName chimefrb.xyz
 
 Host *.arbutus
   ProxyJump arbutus
