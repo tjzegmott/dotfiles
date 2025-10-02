@@ -9,6 +9,7 @@ export PATH=$PATH\:/usr/local/bin/
 export PATH=$PATH\:/opt/homebrew/bin/
 export PATH=$PATH\:~/go/bin/
 export PATH=$PATH\:~/.bun/bin/
+export PATH=$PATH\:~/.local/bin/
 # Astronomy Tools/Scripts
 # export PATH=$PATH\:/Users/$USER/Software/src/bin/
 # export PATH=$PATH\:/Users/$USER/.iraf/bin/  # Setup iraf commands
