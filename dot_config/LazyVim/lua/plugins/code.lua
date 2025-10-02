@@ -2,7 +2,7 @@
 return {
   -- Configure Mason packages
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = {
       ensure_installed = {
         "emmet-ls",
