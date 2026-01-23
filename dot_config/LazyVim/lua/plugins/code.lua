@@ -47,11 +47,42 @@ return {
   },
   {
     "andythigpen/nvim-coverage",
-    version = "*",
+    dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
-      require("coverage").setup({
+      local coverage = require("coverage")
+      coverage.setup({
         auto_reload = true,
+        highlights = {
+          -- customize highlight groups created by the plugin
+          covered = { sp = "#C3E88D" }, -- supports style, fg, bg, sp (see :h highlight-gui)
+          uncovered = { sp = "#F07178" },
+        },
+      })
+
+      -- Optional: auto-load and show on startup if file exists (Hardcoded for python)
+      vim.api.nvim_create_autocmd("VimEnter", {
+        callback = function()
+          if vim.fn.filereadable("coverage.lcov") == 1 then
+            coverage.load_lcov("coverage.lcov", true)
+            coverage.show()
+          end
+        end,
       })
     end,
   },
+  -- {
+  --   "nvim-neotest/neotest",
+  --   dependencies = { "nvim-neotest/nvim-nio" },
+  --   opts = {
+  --     -- Can be a list of adapters like what neotest expects,
+  --     -- or a list of adapter names,
+  --     -- or a table of adapter names, mapped to adapter configs.
+  --     -- The adapter will then be automatically loaded with the config.
+  --     adapters = {
+  --       ["neotest-python"] = {
+  --         args = { "--cov=.", "--cov-report=lcov" },
+  --       },
+  --     },
+  --   },
+  -- },
 }

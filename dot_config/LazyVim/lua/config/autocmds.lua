@@ -7,3 +7,12 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = "*/.ssh/config.d/*",
   command = "set filetype=sshconfig",
 })
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    local coverage = require("coverage")
+    if vim.fn.filereadable("coverage.lcov") == 1 then
+      coverage.load_lcov("coverage.lcov", true)
+    end
+  end,
+})
