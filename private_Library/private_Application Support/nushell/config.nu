@@ -137,7 +137,16 @@ $env.config = {
         pre_prompt: [{ null }] # run before the prompt is shown
         pre_execution: [{ null }] # run before the repl input is run
         env_change: {
-            PWD: [{|before, after| null }] # run if the PWD environment is different since the last repl input
+            PWD: [
+                {|before, after| null },  # run if the PWD environment is different since the last repl input
+                { ||
+                    if (which direnv | is-empty) {
+                        return
+                    }
+            
+                    direnv export json | from json | default {} | load-env
+                }
+            ]
         }
         display_output: "if (term size).columns >= 100 { table -e } else { table }" # run to display the output of a pipeline
         command_not_found: { null } # return an error message when a command is not found
@@ -736,37 +745,37 @@ $env.config = {
 source ~/.oh-my-posh/.oh-my-posh.nu
 
 # Custom auto completion scripts
-source ~/.nushell/nu_scripts/custom-completions/aerospace/aerospace-completions.nu
-source ~/.nushell/nu_scripts/custom-completions/btm/btm-completions.nu
-source ~/.nushell/nu_scripts/custom-completions/curl/curl-completions.nu
-source ~/.nushell/nu_scripts/custom-completions/docker/docker-completions.nu
-source ~/.nushell/nu_scripts/custom-completions/gh/gh-completions.nu
-source ~/.nushell/nu_scripts/custom-completions/git/git-completions.nu
-source ~/.nushell/nu_scripts/custom-completions/nix/nix-completions.nu
-source ~/.nushell/nu_scripts/custom-completions/op/op-completions.nu
-source ~/.nushell/nu_scripts/custom-completions/poetry/poetry-completions.nu
-source ~/.nushell/nu_scripts/custom-completions/pre-commit/pre-commit-completions.nu
-source ~/.nushell/nu_scripts/custom-completions/pytest/pytest-completions.nu
-source ~/.nushell/nu_scripts/custom-completions/ssh/ssh-completions.nu
+source `~/Library/Application Support/nushell/nu_scripts/custom-completions/aerospace/aerospace-completions.nu`
+source `~/Library/Application Support/nushell/nu_scripts/custom-completions/btm/btm-completions.nu`
+source `~/Library/Application Support/nushell/nu_scripts/custom-completions/curl/curl-completions.nu`
+source `~/Library/Application Support/nushell/nu_scripts/custom-completions/docker/docker-completions.nu`
+source `~/Library/Application Support/nushell/nu_scripts/custom-completions/gh/gh-completions.nu`
+source `~/Library/Application Support/nushell/nu_scripts/custom-completions/git/git-completions.nu`
+source `~/Library/Application Support/nushell/nu_scripts/custom-completions/nix/nix-completions.nu`
+source `~/Library/Application Support/nushell/nu_scripts/custom-completions/op/op-completions.nu`
+source `~/Library/Application Support/nushell/nu_scripts/custom-completions/poetry/poetry-completions.nu`
+source `~/Library/Application Support/nushell/nu_scripts/custom-completions/pre-commit/pre-commit-completions.nu`
+source `~/Library/Application Support/nushell/nu_scripts/custom-completions/pytest/pytest-completions.nu`
+source `~/Library/Application Support/nushell/nu_scripts/custom-completions/ssh/ssh-completions.nu`
 
 # Set colour scheme
-use ~/.nushell/nu_scripts/themes/nu-themes/catppuccin-latte.nu
+use `~/Library/Application Support/nushell/nu_scripts/themes/nu-themes/catppuccin-latte.nu`
 $env.config = ($env.config | merge {color_config: (catppuccin-latte )})
 hide catppuccino-mocha
 
 # Init Atuin
-source ~/.nushell/atuin.nu
+source `~/Library/Application Support/nushell/atuin.nu`
 
 # Init zoxide
-source ~/.nushell/zoxide.nu
+source `~/Library/Application Support/nushell/zoxide.nu`
 
 # CHIME FRB API
-def _set_chime_tokens [] {
-    $env.CHIME_FRB_ACCESS_TOKEN = $"$(op item get 'chime frb tokens' --vault chime --fields Access.token --reveal)"
-    $env.CHIME_FRB_REFRESH_TOKEN = $"$(op item get 'chime frb tokens' --vault chime --fields Refresh.token --reveal)"
-    $env.FRB_MASTER_ACCESS_TOKEN = $"$(op item get 'chime frb tokens' --vault chime --fields Access.token --reveal)"
-    $env.FRB_MASTER_REFRESH_TOKEN = $"$(op item get 'chime frb tokens' --vault chime --fields Refresh.token --reveal)"
-}
+alias _set_chime_tokens = load-env ({
+      CHIME_FRB_ACCESS_TOKEN: (op item get 'chime frb tokens' --vault chime --fields Access.token --reveal)
+      CHIME_FRB_REFRESH_TOKEN: (op item get 'chime frb tokens' --vault chime --fields Refresh.token --reveal)
+      FRB_MASTER_ACCESS_TOKEN: (op item get 'chime frb tokens' --vault chime --fields Access.token --reveal)
+      FRB_MASTER_REFRESH_TOKEN: (op item get 'chime frb tokens' --vault chime --fields Refresh.token --reveal)
+  })
 
 # Aliases
 alias n = nvim

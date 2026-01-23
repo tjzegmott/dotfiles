@@ -1,4 +1,4 @@
-# Source this in your ~/.config/nushell/config.nu
+# Source this in your ~/Library/Application Support/nushell/config.nu
 $env.ATUIN_SESSION = (atuin uuid)
 hide-env -i ATUIN_HISTORY_ID
 
