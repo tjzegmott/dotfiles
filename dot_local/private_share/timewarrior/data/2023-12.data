@@ -1,7 +1,0 @@
-inc 20231205T190000Z - 20231205T213000Z # Call "frb buffer network testing"
-inc 20231206T163000Z - 20231206T172643Z # Datatrail "chimefrb/datatrail-cli#46"
-inc 20231206T173301Z - 20231206T183110Z # Datatrail "chimefrb/datatrail-cli#46"
-inc 20231206T184000Z - 20231206T220000Z # Datatrail "chimefrb/datatrail-cli#33"
-inc 20231207T151100Z - 20231207T164540Z # "Daily monitoring report"
-inc 20231207T190000Z - 20231207T200000Z # Call "Outrigger Commissioning"
-inc 20231208T150000Z - 20231208T153635Z # Datatrail "chimefrb/datatrail-cli#44" # "Datatrail"
