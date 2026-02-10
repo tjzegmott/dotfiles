@@ -112,7 +112,7 @@ github.default_priority = M
 # A comma-separated list of tags to add to an issue. In most cases, plain strings will 
 # suffice, but you can also specify templates. See the section Field Templates for more 
 # information.
-github.add_tags = #{{githubnumber}}, {{githubtype}}, {{githubrepo|lower}}
+github.add_tags = {{githubtype}}, {{githubrepo|lower}}
 
 # By default, Bugwarrior will import issues with a fairly verbose description template 
 # looking something like this:
@@ -139,7 +139,7 @@ github.password = @oracle:eval:gh auth token
 github.only_if_assigned = tjzegmott
 github.filter_pull_requests = True
 github.default_priority = M
-github.add_tags = #{{githubnumber}}, {{githubtype}}, {{githubrepo|lower}}
+github.add_tags = {{githubtype}}, {{githubrepo|lower}}
 github.description_template = {{githubnumber}}: {{githubtitle}}
 github.project_template =
 
