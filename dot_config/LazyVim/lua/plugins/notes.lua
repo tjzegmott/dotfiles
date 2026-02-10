@@ -111,7 +111,7 @@ return {
     -- dir = "~/vaults/work",
 
     -- Optional, if you keep notes in a specific subdirectory of your vault.
-    notes_subdir = "09 - Inbox",
+    notes_subdir = "09-Inbox",
 
     -- Optional, set the log level for obsidian.nvim. This is an integer corresponding to one of the log
     -- levels defined by "vim.log.levels.*".
@@ -119,7 +119,7 @@ return {
 
     daily_notes = {
       -- Optional, if you keep daily notes in a separate directory.
-      folder = "06 - Periodic/Daily",
+      folder = "06-Periodic/Daily",
       -- Optional, if you want to change the date format for the ID of daily notes.
       date_format = "%Y%m%d",
       -- Optional, if you want to change the date format of the default alias of daily notes.
@@ -249,7 +249,7 @@ return {
 
     -- Optional, for templates (see below).
     templates = {
-      folder = "99 - Meta/00 - Templates",
+      folder = "99-Meta/00-Templates",
       date_format = "%Y%m%d",
       time_format = "%H:%M",
       -- A map for custom variables, the key should be the variable and the value a function
