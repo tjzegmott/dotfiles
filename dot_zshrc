@@ -38,6 +38,7 @@ alias df="duf"
 alias ping="prettyping --nolegend"
 alias cat="bat"
 alias t="tmux"
+alias b="but"
 alias sb="cd /Users/$USER/Workspace/Obsidian/second-brain/ && nvim home.md"
 alias o="/usr/bin/open"
 alias ve='eval $(poetry env activate)'
