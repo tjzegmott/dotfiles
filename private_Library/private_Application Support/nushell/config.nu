@@ -787,6 +787,7 @@ alias ping = prettyping --nolegend
 alias cat = bat
 alias help = tldr
 alias t = tmux
+alias b = but
 alias sb = cd /Users/tzegmott/Workspace/Obsidian/second-brain/
 alias o = /usr/bin/open
 # alias cd = z
