@@ -30,7 +30,7 @@ legacy_matching = False
 
 # log.level specifies the verbosity.  The default is DEBUG.
 # log.level can be one of DEBUG, INFO, WARNING, ERROR, CRITICAL, DISABLED
-#log.level = DEBUG
+log.level = INFO
 
 # If log.file is specified, output will be redirected there.  If it remains
 # unspecified, output is sent to sys.stderr
@@ -104,7 +104,7 @@ github.filter_pull_requests = True
 
 # If set to True and only_if_assigned is set, then also create tasks for issues that are 
 # not assigned to anybody. Defaults to False.
-# github.also_unassigned = False
+github.also_unassigned = False
 
 # Assign this priority (‘L’, ‘M’, or ‘H’) to newly-imported issues. Defaults to M.
 github.default_priority = M
@@ -138,6 +138,8 @@ github.login = tjzegmott
 github.password = @oracle:eval:gh auth token
 github.only_if_assigned = tjzegmott
 github.filter_pull_requests = True
+github.exclude_pull_requests = True
+github.also_unassigned = False
 github.default_priority = M
 github.add_tags = {{githubtype}}, {{githubrepo|lower}}
 github.description_template = {{githubnumber}}: {{githubtitle}}
