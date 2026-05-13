@@ -778,11 +778,13 @@ alias _set_chime_tokens = load-env ({
   })
 
 # Aliases
+alias ql = qlmanage -p
 alias n = nvim
 alias lg = lazygit
 alias ld = lazydocker 
 alias k = kubectl
 alias du = ncdu --color dark -rr -x --exclude .git --exclude node_modules
+alias df = duf
 alias ping = prettyping --nolegend
 alias cat = bat
 alias help = tldr
