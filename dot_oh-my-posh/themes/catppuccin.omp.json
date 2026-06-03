@@ -11,16 +11,12 @@
   "secondary_prompt": {
     "template": "❯❯ ",
     "foreground": "#D4E157",
-    "foreground_templates": [
-      "{{ if gt .Code 0 }}#FF5252{{ end }}"
-    ]
+    "foreground_templates": ["{{ if gt .Code 0 }}#FF5252{{ end }}"]
   },
   "transient_prompt": {
     "template": "❯ ",
     "foreground": "#D4E157",
-    "foreground_templates": [
-      "{{ if gt .Code 0 }}#FF5252{{ end }}"
-    ]
+    "foreground_templates": ["{{ if gt .Code 0 }}#FF5252{{ end }}"]
   },
   "blocks": [
     {
@@ -105,6 +101,26 @@
           "background": "p:pink",
           "type": "shell",
           "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "type": "taskwarrior",
+          "style": "powerline",
+          "leading_diamond": "\ue0b6",
+          "powerline_symbol": "\ue0b4",
+          "foreground": "p:text",
+          "background": "p:lavender",
+          "template": "  {{ range $k, $v := .Commands }}{{ $k }}:{{ $v }} {{ end }}",
+          "options": {
+            "commands": {
+              "due": "+PENDING due.before:tomorrow count",
+              "scheduled": "+PENDING scheduled.before:tomorrow count",
+              "waiting": "+WAITING count",
+              "Total": "+READY count"
+            }
+          }
         },
         {
           "properties": {
@@ -199,9 +215,7 @@
           "foreground": "#D4E157",
           "type": "status",
           "style": "plain",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}#FF5252{{ end }}"
-          ]
+          "foreground_templates": ["{{ if gt .Code 0 }}#FF5252{{ end }}"]
         }
       ],
       "newline": true
