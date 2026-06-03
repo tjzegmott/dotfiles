@@ -2,13 +2,19 @@ clouds:
   arbutus:
     auth_type: v3websso
     auth:
-      auth_url: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/xcdrd2snoycv75tzai3xymfwei/auth_url" }}
-      identity_provider: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/xcdrd2snoycv75tzai3xymfwei/identity_provider" }}
-      protocol: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/xcdrd2snoycv75tzai3xymfwei/protocol" }}
-      project_name: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/xcdrd2snoycv75tzai3xymfwei/project_name" }}
-      project_id: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/xcdrd2snoycv75tzai3xymfwei/project_id" }}
-      project_domain_name: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/xcdrd2snoycv75tzai3xymfwei/project_domain_name" }}
-      project_domain_id: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/xcdrd2snoycv75tzai3xymfwei/project_domain_id" }}
+      auth_url: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/oosl5mf2qbe2az2bkfld5mwxu4/auth_url" }}
+      identity_provider: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/oosl5mf2qbe2az2bkfld5mwxu4/identity_provider" }}
+      protocol: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/oosl5mf2qbe2az2bkfld5mwxu4/protocol" }}
+      project_name: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/oosl5mf2qbe2az2bkfld5mwxu4/project_name" }}
+      project_id: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/oosl5mf2qbe2az2bkfld5mwxu4/project_id" }}
+      project_domain_name: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/oosl5mf2qbe2az2bkfld5mwxu4/project_domain_name" }}
+      project_domain_id: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/oosl5mf2qbe2az2bkfld5mwxu4/project_domain_id" }}
     region: RegionOne
     interface: public
     identity_api_version: 3
+  arbutus-terraform:
+    auth_type: v3applicationcredential
+    auth:
+      auth_url: https://identity.arbutus.alliancecan.ca/
+      application_credential_id: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/xcdrd2snoycv75tzai3xymfwei/application_credential_id" }}
+      application_credential_secret: {{ onepasswordRead "op://cbwrud3iyyvamcw5wmnf7hl6zu/xcdrd2snoycv75tzai3xymfwei/application_credential_secret" }}
