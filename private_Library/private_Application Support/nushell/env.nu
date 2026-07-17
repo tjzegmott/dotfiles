@@ -118,7 +118,8 @@ $env.PATH = ($env.PATH | split row (char esep) | prepend '/nix/var/nix/profiles/
 $env.EDITOR = "nvim"
 
 # BAT THEME
-$env.BAT_THEME = "zenburn"
+$env.BAT_THEME_LIGHT = "Catppuccin Latte"
+$env.BAT_THEME_DARK = "Catppuccin Macchiato"
 
 # NeoVim
 $env.NVIM_APPNAME = "LazyVim"
