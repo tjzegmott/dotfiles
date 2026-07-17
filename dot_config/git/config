@@ -16,6 +16,11 @@
 [credential "https://gist.github.com"]
 	helper = !/Users/tzegmott/.nix-profile/bin/gh auth git-credential
 
+[gitbutler]
+	aiOllamaEndpoint = http://127.0.0.1:11434
+	aiOllamaModelName = qwen3.5:4b
+	aiModelProvider = openai
+
 [delta]
   navigate = true    # use n and N to move between diff sections
   line-numbers = true
