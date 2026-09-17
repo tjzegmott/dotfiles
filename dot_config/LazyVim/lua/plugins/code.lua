@@ -6,10 +6,8 @@ return {
     opts = {
       ensure_installed = {
         "emmet-ls",
-        -- "stylua",
-        -- "shellcheck",
-        -- "shfmt",
-        -- "flake8",
+        "ruff",
+        "ty",
       },
     },
   },
@@ -24,7 +22,7 @@ return {
         ["javascriptreact"] = { "prettier" },
         ["typescript"] = { "prettier" },
         ["typescriptreact"] = { "prettier" },
-        ["python"] = { "black", "isort" },
+        ["python"] = { "ruff" },
         ["vue"] = { "prettier" },
         ["css"] = { "prettier" },
         ["scss"] = { "prettier" },
