@@ -131,3 +131,6 @@ $env.OS_CLOUD = "arbutus"
 $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
 mkdir ~/.cache/carapace
 carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
+
+# SSH AUTH SOCKET
+$env.SSH_AUTH_SOCK = $"($env.HOME)/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh"
